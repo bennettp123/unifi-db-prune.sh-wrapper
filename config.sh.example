@@ -1,0 +1,4 @@
+MONGO=/opt/mongodb/bin/mongo
+MONGOD_HOST=127.0.0.1
+MONGOD_PORT=27117
+PRUNE_SCRIPT=/usr/lib/unifi/prune-script/mongo_prune_js.js
