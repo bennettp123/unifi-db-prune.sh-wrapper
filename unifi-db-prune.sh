@@ -14,7 +14,7 @@ RETVAL=0
 function cleanup {
   rm -f "$LOGFILE"
 }
-trap "rm -f \"$LOGFILE\"" EXIT
+trap cleanup EXIT
 
 # send output to logfile and syslog
 exec 3>&1 1> >(exec tee "$LOGFILE" >(exec logger -t "$(basename "$0")") >/dev/null) 2>&1
